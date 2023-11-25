@@ -1,0 +1,808 @@
+{
+	"info": {
+		"_postman_id": "0ba14068-3520-4906-bd11-fe986c8db9c8",
+		"name": "Twitter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15228368"
+	},
+	"item": [
+		{
+			"name": "Production",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"anisaronno@gmail.com\",\n    \"password\": \"password\",\n    \"remember_me\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.asulsis.com/api/login",
+							"protocol": "https",
+							"host": [
+								"api",
+								"asulsis",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"anis\",\n    \"email\": \"saad@gmail.com\",\n    \"username\" : \"saad\",\n    \"password\": \"password\",\n    \"password_confirmation\" : \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/register",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\" : \"Anichur Rahaman\",\n    \"email\": \"anisaronno@gmail.com\",\n    \"username\" : \"anisaronno\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/profile-update/anisaronno",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"profile-update",
+						"anisaronno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1, \n    \"old_password\": \"password3\",\n    \"password\": \"password4\",\n    \"password_confirmation\" : \"password4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/password-update/anisaronno",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"password-update",
+						"anisaronno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anisaronno@gmail.com\",\n    \"password\": \"password\",\n    \"remember_me\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/login",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recover Password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anisaronno@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/password-recover",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"password-recover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdHdpdHRlci50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTY5OTU0NzYzMiwiZXhwIjoxNjk5NTUxMjMyLCJuYmYiOjE2OTk1NDc2MzIsImp0aSI6Inl2NW13Q29sWFljVGhrUWsiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ehlgz16b0lPDMyetrM_5UZ5rGtO1KfvgZ_zlgNj5iA8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anis904692@gmail.com\",\n    \"username\" : \"anis\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/logout",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anis904692@gmail.com\",\n    \"username\" : \"anis\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/profile",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"anis904692@gmail.com\",\n    \"username\" : \"anis\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/user-profile/anisaronno",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"user-profile",
+						"anisaronno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Single",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweet/ab-modi-non-est-ipsam-eum-ducimus-aut-dolores-rep-2",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweet",
+						"ab-modi-non-est-ipsam-eum-ducimus-aut-dolores-rep-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweets All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweets?username=tgrady",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweets"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "tgrady"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweets Following",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/following-tweets",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"following-tweets"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "abshire.isaac",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet by username",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweets/elenora24",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweets",
+						"elenora24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\" : \"Test Content edited 123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweet/ab-modi-non-est-ipsam-eum-ducimus-aut-dolores-rep-2",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweet",
+						"ab-modi-non-est-ipsam-eum-ducimus-aut-dolores-rep-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\" : \"Test Content edited\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweet/voluptates-natus-et-magni-numquam-doloribus-qui-su",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweet",
+						"voluptates-natus-et-magni-numquam-doloribus-qui-su"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\" : \"Test Content\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/tweet",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"following_id\" : \"80\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/follow",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "React Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"react\" : \"Care\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/react/2",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"react",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "React Remove",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"react\" : \"Like\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/remove-react/1",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"remove-react",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnFollow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"following_id\" : \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://twitter.test/api/unfollow",
+					"protocol": "http",
+					"host": [
+						"twitter",
+						"test"
+					],
+					"path": [
+						"api",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdHdpdHRlci50ZXN0L2FwaS9sb2dpbiIsImlhdCI6MTcwMDQxNjg4OCwiZXhwIjoxNzAwNDIwNDg4LCJuYmYiOjE3MDA0MTY4ODgsImp0aSI6Ik5LTWdaWXdUZXZ6U1lWTnciLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.-6dFLIeMTohsdVHOmk64zIyYd4ycT3qQJJIcfk2Bi7s",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
